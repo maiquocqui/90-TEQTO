@@ -1,0 +1,108 @@
+header
+	background: $white
+	border-bottom: 1px solid darken($white,10%)
+	+transition(all,0.5s)
+	&.minimal
+		// box-shadow: 0px 10px 30px -10px color-rgba($black,0.1)
+	.header-main
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+	.sitelogo
+		height: 70px
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(md)
+			height: 60px
+		a
+			display: block
+		img
+			height: 30px
+	.btn-showmenu
+		display: none
+		.material-icons
+			+fs(32rem)
+			vertical-align: middle
+		+media-breakpoint-down(md)
+			display: block
+	.menu
+		+media-breakpoint-down(md)
+			+pos(fix,0 0 0 null)
+			left: 0
+			overflow: auto
+			z-index: 1000
+			background-image: url(../img/menubg.png)
+			background-size: 1300px 700px
+			background-repeat: repeat
+			background-color: $blue
+			+transition(all,0.5s)
+			+transform(translateX(100%))
+			&.open
+				+transform(translateX(0))
+		.menu-logo
+			display: none
+			+media-breakpoint-down(md)
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: space-between
+				height: 60px
+				padding: 0px 30px
+				border-bottom: 1px solid color-rgba($white,0.2)
+			.sitelogo
+				a
+				img
+					filter: grayscale(100%) brightness(400%)
+			.btn-closemenu
+				.material-icons
+					+fs(32rem)
+					color: $white
+					vertical-align: middle
+		ul.menu-link
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				flex-wrap: wrap
+				padding: 30px 0
+			li
+				+media-breakpoint-down(md)
+					width: 100%
+				+ li
+					margin-left: 35px
+					+media-breakpoint-down(md)
+						margin-left: 0
+				a
+					display: block
+					+fs(15rem)
+					font-weight: 500
+					color: $main
+					+media-breakpoint-down(md)
+						color: $white
+						+fs(24rem)
+						padding: 10px 30px
+					&:hover
+						color: $blue
+						+media-breakpoint-down(md)
+							color: $pink
+				&.active
+					a
+						font-weight: 600
+						color: $blue
+						+media-breakpoint-down(md)
+							color: $pink
+							font-weight: 700
+				&:last-child
+					+media-breakpoint-up(lg)
+						a
+							+bor-rad(5px)
+							padding: 6px 20px
+							border: 1px solid $blue
+							color: $blue
+							&:hover
+								background: $blue
+								color: $white
+								box-shadow: 0px 10px 20px -10px color-rgba($blue,1)

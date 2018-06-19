@@ -1,0 +1,54 @@
+.contact-page
+	padding: 60px 0
+	+media-breakpoint-down(md)
+		padding: 40px 0
+	+media-breakpoint-down(xs)
+	.home-title
+		text-align: center
+		+media-breakpoint-down(xs)
+			text-align: left
+	.contact-info
+		padding: 20px 0
+		+media-breakpoint-down(xs)
+			padding: 0
+			margin-bottom: 30px
+		.company
+			+fs(20rem)
+			font-weight: 700
+			margin-bottom: 20px
+			color: $blue
+			+media-breakpoint-down(xs)
+				margin-bottom: 15px
+		ul
+			+bor-rad(10px)
+			background: darken($white,3%)
+			padding: 30px
+			+media-breakpoint-down(md)
+				padding: 20px
+			li
+				padding-left: 30px
+				+pos(rel,null)
+				margin-bottom: 10px
+				+media-breakpoint-down(md)
+					+fs(14rem)
+				a
+					&:hover
+						color: $blue
+				&:last-child
+					margin-bottom: 0px
+				.material-icons
+					+fs(20rem)
+					+pos(abs, 2px null null 0)
+					color: $pink
+					+media-breakpoint-down(md)
+						top: 0
+
+	.contact-map
+		+bor-rad(10px)
+		overflow: hidden
+		border: 1px solid darken($white,10%)
+		iframe
+			+media-breakpoint-down(md)
+				height: 300px
+			+media-breakpoint-down(xs)
+				height: 280px
